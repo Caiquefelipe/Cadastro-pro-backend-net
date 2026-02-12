@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.2.11415.280 d18.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Pro.Api", "Cadastro.Pro.Api\Cadastro.Pro.Api.csproj", "{5707F54A-6AA2-4440-8221-7B1F5ED9790C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Pro.Application", "Cadastro.Pro.Application\Cadastro.Pro.Application.csproj", "{621F2056-DAC5-FFAA-EB51-C584F6562A51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Pro.Domain", "Cadastro.Pro.Domain\Cadastro.Pro.Domain.csproj", "{8F30D44B-D68D-41A7-B614-5605B12353D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Pro.Infrastructure", "Cadastro.Pro.Infrastructure\Cadastro.Pro.Infrastructure.csproj", "{8851DF72-C44E-4912-85E1-8D023E1D4AB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4EEF6036-0850-4C4A-87B6-417C5ACBDE8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D3DAFEFA-1604-47F7-B099-57BFBAD76079}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5707F54A-6AA2-4440-8221-7B1F5ED9790C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5707F54A-6AA2-4440-8221-7B1F5ED9790C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5707F54A-6AA2-4440-8221-7B1F5ED9790C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5707F54A-6AA2-4440-8221-7B1F5ED9790C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{621F2056-DAC5-FFAA-EB51-C584F6562A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621F2056-DAC5-FFAA-EB51-C584F6562A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621F2056-DAC5-FFAA-EB51-C584F6562A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621F2056-DAC5-FFAA-EB51-C584F6562A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F30D44B-D68D-41A7-B614-5605B12353D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F30D44B-D68D-41A7-B614-5605B12353D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F30D44B-D68D-41A7-B614-5605B12353D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F30D44B-D68D-41A7-B614-5605B12353D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8851DF72-C44E-4912-85E1-8D023E1D4AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8851DF72-C44E-4912-85E1-8D023E1D4AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8851DF72-C44E-4912-85E1-8D023E1D4AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8851DF72-C44E-4912-85E1-8D023E1D4AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5707F54A-6AA2-4440-8221-7B1F5ED9790C} = {4EEF6036-0850-4C4A-87B6-417C5ACBDE8B}
+		{621F2056-DAC5-FFAA-EB51-C584F6562A51} = {4EEF6036-0850-4C4A-87B6-417C5ACBDE8B}
+		{8F30D44B-D68D-41A7-B614-5605B12353D5} = {4EEF6036-0850-4C4A-87B6-417C5ACBDE8B}
+		{8851DF72-C44E-4912-85E1-8D023E1D4AB6} = {4EEF6036-0850-4C4A-87B6-417C5ACBDE8B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD5F265C-CCBB-4AD9-80C5-5DE3476F78A3}
+	EndGlobalSection
+EndGlobal
