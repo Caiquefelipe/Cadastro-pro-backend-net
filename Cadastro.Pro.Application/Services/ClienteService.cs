@@ -1,6 +1,7 @@
 ﻿using Cadastro.Pro.Application.Abstractions;
 using Cadastro.Pro.Domain.Entities;
 using Cadastro.Pro.Domain.Interfaces;
+using System.Data;
 
 namespace Cadastro.Pro.Application.Services
 {

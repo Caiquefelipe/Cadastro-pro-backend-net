@@ -37,6 +37,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+
 // CORS TEM QUE VIR ANTES DOS CONTROLLERS
 app.UseCors("AllowAll");
 
