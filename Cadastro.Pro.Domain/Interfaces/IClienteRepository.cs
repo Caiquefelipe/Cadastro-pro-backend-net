@@ -8,5 +8,6 @@ namespace Cadastro.Pro.Domain.Interfaces
         Task<Customer> GetByIdAsync(int id);
         Task<Customer> AddAsync(Customer customer);
         Task<bool> RemoveAsync(int id);
+        Task<Customer> UpdateClientAsync(Customer customer);
     }
 }

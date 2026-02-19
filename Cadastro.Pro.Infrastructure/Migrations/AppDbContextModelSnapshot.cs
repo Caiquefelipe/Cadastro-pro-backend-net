@@ -16,12 +16,12 @@ namespace Cadastro.Pro.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.4")
+                .HasAnnotation("ProductVersion", "10.0.3")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("CrudApi.models.Cliente", b =>
+            modelBuilder.Entity("Cadastro.Pro.Domain.Entities.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -29,48 +29,48 @@ namespace Cadastro.Pro.Infrastructure.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Bairro")
+                    b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Cep")
+                    b.Property<string>("AddressNumber")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Descricao")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Endereco")
+                    b.Property<string>("BirthDate")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Estado")
+                    b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Nascimento")
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Nome")
+                    b.Property<string>("Neighborhood")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("NumeroEndereco")
+                    b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Telefone")
+                    b.Property<string>("PostalCode")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("cidade")
+                    b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("Customers");
                 });
 #pragma warning restore 612, 618
         }

@@ -50,6 +50,17 @@ namespace Cadastro.Pro.Api.Controllers
             return Ok(customers);
         }
 
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] Customer customer)
+        {
+            if(customer == null)
+            {
+                return BadRequest("Cliente");
+            }
+            var customerUpdate = await _service.UpdateCustomer(customer);
+            return Ok(customerUpdate);
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

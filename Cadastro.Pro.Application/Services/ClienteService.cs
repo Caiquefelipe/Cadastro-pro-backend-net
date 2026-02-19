@@ -1,7 +1,6 @@
 ﻿using Cadastro.Pro.Application.Abstractions;
 using Cadastro.Pro.Domain.Entities;
 using Cadastro.Pro.Domain.Interfaces;
-using System.Data;
 
 namespace Cadastro.Pro.Application.Services
 {
@@ -32,6 +31,10 @@ namespace Cadastro.Pro.Application.Services
         public Task<bool> DeleteCustomer(int id)
         {
             return _repository.RemoveAsync(id);
+        }
+        public Task<Customer> UpdateCustomer(Customer customer)
+        {
+            return _repository.UpdateClientAsync(customer);
         }
     }
 
