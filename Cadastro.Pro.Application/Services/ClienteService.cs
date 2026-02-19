@@ -1,4 +1,5 @@
 ﻿using Cadastro.Pro.Application.Abstractions;
+using Cadastro.Pro.Application.DTOs;
 using Cadastro.Pro.Domain.Entities;
 using Cadastro.Pro.Domain.Interfaces;
 
@@ -32,10 +33,28 @@ namespace Cadastro.Pro.Application.Services
         {
             return _repository.RemoveAsync(id);
         }
-        public Task<Customer> UpdateCustomer(Customer customer)
+        public async Task<bool> UpdateCustomer(int id, UpdateCustomerDto dto)
         {
-            return _repository.UpdateClientAsync(customer);
+            var customer = await _repository.GetByIdAsync(id);
+
+            if (customer == null)
+                return false;
+
+            customer.Name = dto.Name;
+            customer.Phone = dto.Phone;
+            customer.PostalCode = dto.PostalCode;
+            customer.Address = dto.Address;
+            customer.AddressNumber = dto.AddressNumber;
+            customer.Neighborhood = dto.Neighborhood;
+            customer.City = dto.City;
+            customer.State = dto.State;
+            customer.Description = dto.Description;
+
+            await _repository.SaveChangesAsync();
+
+            return true;
         }
+
     }
 
 }

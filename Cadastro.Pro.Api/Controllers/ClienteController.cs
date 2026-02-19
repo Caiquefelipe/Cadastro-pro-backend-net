@@ -1,4 +1,5 @@
 ﻿using Cadastro.Pro.Application.Abstractions;
+using Cadastro.Pro.Application.DTOs;
 using Cadastro.Pro.Application.Services;
 using Cadastro.Pro.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -50,15 +51,15 @@ namespace Cadastro.Pro.Api.Controllers
             return Ok(customers);
         }
 
-        [HttpPut]
-        public async Task<IActionResult> Update([FromBody] Customer customer)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] UpdateCustomerDto dto)
         {
-            if(customer == null)
+            var updated = await _service.UpdateCustomer(id, dto);
+            if(!updated)
             {
-                return BadRequest("Cliente");
+                return NotFound("Cliente não encontrado");
             }
-            var customerUpdate = await _service.UpdateCustomer(customer);
-            return Ok(customerUpdate);
+            return NoContent();
         }
 
         [HttpDelete("{id}")]

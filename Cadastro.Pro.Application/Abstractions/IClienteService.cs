@@ -1,4 +1,5 @@
-﻿using Cadastro.Pro.Domain.Entities;
+﻿using Cadastro.Pro.Application.DTOs;
+using Cadastro.Pro.Domain.Entities;
 
 namespace Cadastro.Pro.Application.Abstractions
 {
@@ -8,7 +9,8 @@ namespace Cadastro.Pro.Application.Abstractions
         Task<bool> DeleteCustomer(int id);
         Task<Customer?> GetByIdAsync(int id);
         Task<List<Customer>> List();
-        Task<Customer> UpdateCustomer(Customer customer);
+        Task<bool> UpdateCustomer(int id, UpdateCustomerDto dto);
+
 
     }
 }

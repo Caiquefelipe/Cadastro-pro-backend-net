@@ -32,14 +32,6 @@ namespace Cadastro.Pro.Infrastructure.Repositories
             return await _context.Customers.FindAsync(id);
         }
 
-        public async Task<Customer> UpdateClientAsync(Customer customer)
-        {
-            _context.Customers.Update(customer);
-             await _context.SaveChangesAsync();
-            return customer;
-
-        }
-
         public async Task<bool> RemoveAsync(int id)
         {
             var customer = await _context.Customers.FindAsync(id);
@@ -50,6 +42,11 @@ namespace Cadastro.Pro.Infrastructure.Repositories
             _context.Customers.Remove(customer);
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await _context.SaveChangesAsync();
         }
     }
 
