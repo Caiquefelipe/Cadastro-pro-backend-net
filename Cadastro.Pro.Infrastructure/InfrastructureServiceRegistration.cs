@@ -12,8 +12,9 @@ namespace Cadastro.Pro.Infrastructure
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration config)
         {
             services.AddDbContext<AppDbContext>(options => 
-                options.UseNpgsql(config.GetConnectionString("Default"))
+                options.UseNpgsql(config.GetConnectionString("DefaultConnection"))
             );
+
 
             // Repositories
             services.AddTransient<ICustomerRepository, CustomerRepository>();

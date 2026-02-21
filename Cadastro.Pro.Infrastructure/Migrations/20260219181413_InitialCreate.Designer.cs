@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Cadastro.Pro.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260218141821_InitialCreate")]
+    [Migration("20260219181413_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
