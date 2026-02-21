@@ -1,5 +1,7 @@
 ﻿using Cadastro.Pro.Application;
 using Cadastro.Pro.Infrastructure;
+using Cadastro.Pro.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +44,11 @@ app.UseCors("AllowAll");
 app.UseAuthorization();
 
 app.MapControllers();
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
 
 // 🔥 PORTA DO RENDER (SÓ UMA VEZ E NO FINAL)
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
