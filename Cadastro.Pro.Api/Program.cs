@@ -42,12 +42,9 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-    db.Database.Migrate();
-}
+
 
 // 🔥 PORTA DO RENDER (SÓ UMA VEZ E NO FINAL)
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+
 app.Run($"http://0.0.0.0:{port}");
