@@ -11,10 +11,16 @@ namespace Cadastro.Pro.Infrastructure
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration config)
         {
-            services.AddDbContext<AppDbContext>(options => 
-                options.UseNpgsql(config.GetConnectionString("DefaultConnection"))
-            );
-
+            services.AddDbContext<AppDbContext>(options =>
+         options.UseNpgsql(
+             config.GetConnectionString("DefaultConnection"),
+             o =>
+             {
+                 o.EnableRetryOnFailure(3);
+                 o.CommandTimeout(60);
+             }
+         )
+     );
 
             // Repositories
             services.AddTransient<ICustomerRepository, CustomerRepository>();
