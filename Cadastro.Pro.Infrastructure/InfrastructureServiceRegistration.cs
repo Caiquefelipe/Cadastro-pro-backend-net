@@ -13,12 +13,7 @@ namespace Cadastro.Pro.Infrastructure
         {
             services.AddDbContext<AppDbContext>(options =>
          options.UseNpgsql(
-             config.GetConnectionString("DefaultConnection"),
-             o =>
-             {
-                 o.EnableRetryOnFailure(3);
-                 o.CommandTimeout(60);
-             }
+             config.GetConnectionString("DefaultConnection")
          )
      );
 
