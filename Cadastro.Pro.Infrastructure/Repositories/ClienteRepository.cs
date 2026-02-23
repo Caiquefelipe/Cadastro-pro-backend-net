@@ -24,7 +24,10 @@ namespace Cadastro.Pro.Infrastructure.Repositories
 
         public async Task<List<Customer>> GetAllAsync()
         {
-            return await _context.Customers.ToListAsync();
+            return await _context.Customers
+                .AsNoTracking()
+                .Take(100)
+                .ToListAsync();
         }
 
         public async Task<Customer?> GetByIdAsync(int id)
